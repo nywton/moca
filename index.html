@@ -5,29 +5,29 @@
   <title>Contagem Regressiva para 10/05/2025</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-pink-100 to-yellow-200 min-h-screen flex items-center justify-center p-4">
+<body class="bg-gradient-to-br from-pink-100 to-yellow-200 min-h-screen flex items-center justify-center p-4 overflow-x-hidden">
   <div class="text-center w-full max-w-4xl">
     <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 px-2">
       🎊 Felicidade chegando 🎊
     </h1>
-    <div class="flex flex-wrap justify-center gap-4 px-2">
-      <div class="bg-pink-600 rounded-2xl shadow-lg p-6 min-w-[6rem] sm:min-w-[7rem] md:min-w-[8rem]">
-        <div class="text-3xl sm:text-4xl font-bold" id="days">0</div>
-        <div class="mt-2 text-sm sm:text-base">📅 Dias</div>
+      <div class="flex text-white flex-wrap justify-center gap-4 px-2">
+        <div class="bg-pink-600 rounded-2xl shadow-lg p-6 min-w-[150px] h-36 sm:h-40 flex flex-col justify-center items-center">
+          <div class="text-5xl sm:text-6xl font-bold" id="days">0</div>
+          <div class="mt-2 text-lg sm:text-xl">📅 Dias</div>
+        </div>
+        <div class="bg-purple-600 rounded-2xl shadow-lg p-6 min-w-[150px] h-36 sm:h-40 flex flex-col justify-center items-center">
+          <div class="text-5xl sm:text-6xl font-bold" id="hours">0</div>
+          <div class="mt-2 text-lg sm:text-xl">⏰ Horas</div>
+        </div>
+        <div class="bg-blue-500 rounded-2xl shadow-lg p-6 min-w-[150px] h-36 sm:h-40 flex flex-col justify-center items-center">
+          <div class="text-5xl sm:text-6xl font-bold" id="minutes">0</div>
+          <div class="mt-2 text-lg sm:text-xl">🕐 Minutos</div>
+        </div>
+        <div class="bg-yellow-500 rounded-2xl shadow-lg p-6 min-w-[150px] h-36 sm:h-40 flex flex-col justify-center items-center">
+          <div class="text-5xl sm:text-6xl font-bold" id="seconds">0</div>
+          <div class="mt-2 text-lg sm:text-xl">⏳ Segundos</div>
+        </div>
       </div>
-      <div class="bg-purple-600 rounded-2xl shadow-lg p-6 min-w-[6rem] sm:min-w-[7rem] md:min-w-[8rem]">
-        <div class="text-3xl sm:text-4xl font-bold" id="hours">0</div>
-        <div class="mt-2 text-sm sm:text-base">⏰ Horas</div>
-      </div>
-      <div class="bg-blue-500 rounded-2xl shadow-lg p-6 min-w-[6rem] sm:min-w-[7rem] md:min-w-[8rem]">
-        <div class="text-3xl sm:text-4xl font-bold" id="minutes">0</div>
-        <div class="mt-2 text-sm sm:text-base">🕐 Minutos</div>
-      </div>
-      <div class="bg-yellow-500 rounded-2xl shadow-lg p-6 min-w-[6rem] sm:min-w-[7rem] md:min-w-[8rem]">
-        <div class="text-3xl sm:text-4xl font-bold" id="seconds">0</div>
-        <div class="mt-2 text-sm sm:text-base">⏳ Segundos</div>
-      </div>
-    </div>
   </div>
 
   <script>
