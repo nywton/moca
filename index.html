@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Contagem Regressiva para 10/05/2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-pink-100 to-yellow-200 min-h-screen flex items-center justify-center p-4">
+  <div class="text-center">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+      🎊 Contagem Regressiva 🎊
+    </h1>
+    <div class="flex flex-wrap justify-center gap-4 text-white">
+      <div class="bg-pink-600 rounded-2xl shadow-lg p-6 w-28 sm:w-32">
+        <div class="text-2xl sm:text-3xl font-bold" id="days">0</div>
+        <div class="mt-2 text-sm sm:text-base">Dias</div>
+      </div>
+      <div class="bg-purple-600 rounded-2xl shadow-lg p-6 w-28 sm:w-32">
+        <div class="text-2xl sm:text-3xl font-bold" id="hours">0</div>
+        <div class="mt-2 text-sm sm:text-base">Horas</div>
+      </div>
+      <div class="bg-blue-500 rounded-2xl shadow-lg p-6 w-28 sm:w-32">
+        <div class="text-2xl sm:text-3xl font-bold" id="minutes">0</div>
+        <div class="mt-2 text-sm sm:text-base">Minutos</div>
+      </div>
+      <div class="bg-yellow-500 rounded-2xl shadow-lg p-6 w-28 sm:w-32">
+        <div class="text-2xl sm:text-3xl font-bold" id="seconds">0</div>
+        <div class="mt-2 text-sm sm:text-base">Segundos</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function updateCountdown() {
+      // 10 de Maio de 2025 (mês é 0-indexado, então 4 = Maio)
+      const targetDate = new Date(2025, 4, 10, 0, 0, 0);
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        document.querySelector('h1').textContent = "🎉 Chegou o grande dia! 🎉";
+        ['days', 'hours', 'minutes', 'seconds'].forEach(id => {
+          document.getElementById(id).textContent = '0';
+        });
+        return;
+      }
+
+      const seconds = Math.floor((diff / 1000) % 60);
+      const minutes = Math.floor((diff / 1000 / 60) % 60);
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+      document.getElementById('days').textContent = days;
+      document.getElementById('hours').textContent = hours;
+      document.getElementById('minutes').textContent = minutes;
+      document.getElementById('seconds').textContent = seconds;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
+
